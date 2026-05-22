@@ -31,7 +31,7 @@ def generate_recipe(ingredientes):
         model="gemini-3.1-flash-lite",
         contents=conteudo_prompt,
         config=types.GenerateContentConfig(
-            system_instruction=SYSTEM_INSTRUCTION,
+            system_instruction=SYSTEM_INSTRUCTION, # Instrução para o modelo seguir o esquema do config.py
             response_mime_type="application/json", # Força a saída em formato JSON
             response_schema=RECEITA_SCHEMA,       # Segue o esquema do config.py
         )
